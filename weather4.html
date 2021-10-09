@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+  </head>
+
+  <body>
+    <span
+      ><form class="weather" id="forms">
+        <input type="text" id="cityname" class="cityName" />
+        <input
+          class="search"
+          type="submit"
+          name="weather"
+          id="weather"
+          value="Search"
+        /></form
+    ></span>
+
+    <button>Current</button>
+
+    <div class="container">
+      <span class="header"
+        >weather in
+        <h1 id="hc"></h1>
+        now</span
+      >
+      <p id="time"></p>
+      <div class="sunny">
+        <div class="row">
+          <div class="col-3">
+            <span>
+              <h2 id="cityTemp"><span id="centigrad">°C</span></h2>
+              <span class="sun">☀</span></span
+            >
+          </div>
+          <div class="col-3">
+            Precipitation:<span id="prec">0</span>% <br />
+            Humidity: <span id="hum">14</span>% <br />
+            Wind: <span id="wind">8</span>km/h
+          </div>
+        </div>
+      </div>
+
+      <div class="tomorrow">
+        <div class="row">
+          <div class="col-2"><strong> Tomorrow</strong></div>
+          <div class="col-2">
+            28℃ <br />
+            19℃
+          </div>
+          <div class="col-3">Wind: 7 km/h</div>
+        </div>
+      </div>
+      <div class="wednsday">
+        <div class="row">
+          <div class="col-2"><strong>Wednsday</strong></div>
+          <div class="col-2">
+            30℃ <br />
+            22℃
+          </div>
+
+          <div class="col-3">Wind: 8 km/h</div>
+        </div>
+      </div>
+      <div class="thursday">
+        <div class="row">
+          <div class="col-2"><strong>Thursday</strong></div>
+          <div class="col-2">
+            29℃ <br />
+            20℃
+          </div>
+          <div class="col-3">Wind: 5 km/h</div>
+        </div>
+      </div>
+      <div class="friday">
+        <div class="row">
+          <div class="col-2"><strong>Friday</strong></div>
+          <div class="col-2">
+            32℃ <br />
+            25℃
+          </div>
+          <div class="col-3">Wind: 8 km/h</div>
+        </div>
+      </div>
+      <div class="saturday">
+        <div class="row">
+          <div class="col-2"><strong>Saturday</strong></div>
+          <div class="col-2">
+            31℃ <br />
+            24℃
+          </div>
+          <div class="col-3">Wind: 6 km/h</div>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>

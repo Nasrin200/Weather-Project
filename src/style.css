@@ -1,0 +1,69 @@
+h1 {
+  display: inline;
+}
+.header {
+  margin-top: 100px;
+  margin-left: 90px;
+}
+h2 {
+  display: inline;
+  color: blue;
+}
+.sunny {
+  margin-top: 30px;
+}
+.tomorrow {
+  padding: 10px;
+  margin-top: 40px;
+}
+.wednsday {
+  padding: 10px;
+  margin-top: 10px;
+}
+.thursday {
+  padding: 10px;
+  margin-top: 10px;
+}
+.friday {
+  padding: 10px;
+  margin-top: 10px;
+}
+.saturday {
+  padding: 10px;
+  margin-top: 10px;
+}
+.container {
+  margin-top: 50px;
+}
+.weather {
+  padding: 10px 10px 10px 110px;
+  margin-top: 40px;
+}
+.search {
+  margin-left: 15px;
+  color: white;
+  background-color: blue;
+  border-radius: 10px;
+  border-color: transparent;
+}
+.cityName {
+  border-radius: 10px;
+}
+#centigrad:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#fahrenheit:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+#forms {
+  display: inline;
+}
+button {
+  margin-left: 15px;
+  color: white;
+  background-color: green;
+  border-radius: 10px;
+  border-color: transparent;
+}
