@@ -1,3 +1,8 @@
+.weather-border {
+background-color: antiquewhite;
+margin-right: 500px;
+border-radius: 20px;
+}
 #forms {
 padding-top: 30px;
 }
@@ -12,6 +17,10 @@ h1 {
   margin-left: 90px;
 }
 h2 {
+  display: inline;
+  color: blue;
+}
+#centigrad {
   display: inline;
   color: blue;
 }
@@ -77,4 +86,7 @@ button {
   padding-left: 120px;
   padding-top: 20px;
   padding-bottom: 50px;
+}
+.centered {
+  margin-left: 130px;
 }
