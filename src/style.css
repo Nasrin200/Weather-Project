@@ -2,6 +2,8 @@
 background-color: antiquewhite;
 max-width: 600px;
 border-radius: 20px;
+margin: 0 auto;
+border: 1px solid pink;
 }
 #forms {
 padding-top: 30px;
