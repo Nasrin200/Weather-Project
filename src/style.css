@@ -1,6 +1,6 @@
 .weather-border {
 background-color: antiquewhite;
-margin-right: 500px;
+max-width: 600px;
 border-radius: 20px;
 }
 #forms {
