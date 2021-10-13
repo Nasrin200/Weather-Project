@@ -1,5 +1,7 @@
 function showWeather(response) {
   document.querySelector("#hc").innerHTML = response.data.name;
+  document.querySelector("#condition").innerHTML = 
+    response.data.weather[0].description
   document.querySelector("#cityTemp").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -12,6 +14,7 @@ function showWeather(response) {
   document.querySelector("#prec").innerHTML = Math.round(
     response.data.clouds.all
   );
+  console.log(response.data)
 }
 function search(event) {
   event.preventDefault();
@@ -25,6 +28,8 @@ form.addEventListener("submit", search);
 
 function showCurrent(response) {
   document.querySelector("#hc").innerHTML = response.data.name;
+  document.querySelector("#condition").innerHTML = 
+    response.data.weather[0].description;
   document.querySelector("#cityTemp").innerHTML = Math.round(
     response.data.main.temp
   );
