@@ -1,3 +1,19 @@
+
+function formatDate(timestamp){
+let date= new Date(timestamp)
+let hours= date.getHours();
+if (hours<10){
+`0${hours}`
+}
+let minutes= date.getMinutes();
+if (minutes<10){
+  `0${minutes}`
+  }
+  let days=["Sunday","Monday","Tuesday","Wednsday","Thursday","Friday","Saturday"];
+  let day= days[date.getDay()];
+return `${day} ${hours}:${minutes}`;
+
+}
 function showWeather(response) {
   document.querySelector("#hc").innerHTML = response.data.name;
   document.querySelector("#condition").innerHTML = 
@@ -14,7 +30,9 @@ function showWeather(response) {
   document.querySelector("#prec").innerHTML = Math.round(
     response.data.clouds.all
   );
-  console.log(response.data)
+  let dateElement=document.querySelector("#date")
+  dateElement.innerHTML=formatDate(response.data.dt*1000)
+ 
 }
 function search(event) {
   event.preventDefault();
@@ -41,7 +59,9 @@ function showCurrent(response) {
   );
   document.querySelector("#prec").innerHTML = Math.round(
     response.data.clouds.all
+ 
   );
+
 }
 function endButton() {
   function showPosition(position) {
