@@ -18,6 +18,7 @@ function showWeather(response) {
   document.querySelector("#hc").innerHTML = response.data.name;
   document.querySelector("#condition").innerHTML = 
     response.data.weather[0].description
+    
   document.querySelector("#cityTemp").innerHTML = Math.round(
     response.data.main.temp
   );
@@ -32,7 +33,10 @@ function showWeather(response) {
   );
   let dateElement=document.querySelector("#date")
   dateElement.innerHTML=formatDate(response.data.dt*1000)
+let iconElement= response.data.weather[0].icon
+ document.querySelector("#icon").setAttribute ("src",`http://openweathermap.org/img/wn/${iconElement}@2x.png`)
  
+    
 }
 function search(event) {
   event.preventDefault();
