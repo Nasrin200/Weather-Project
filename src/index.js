@@ -87,10 +87,27 @@ form.addEventListener("submit", search);
 let centigradTemperature= null;
 function displayFahrenheitTemperature(event){
 event.preventDefault()
+centigradLink.classList.remove("active")
+fahrenheitLink.classList.add("active")
 let fahrenheitTemperature = (centigradTemperature*9)/5+32;
 let temperatureElement=document.querySelector("#cityTemp")
 
 temperatureElement.innerHTML= Math.round(fahrenheitTemperature)
 }
-let fahrenheitLink=document.querySelector("#fahrenheit")
+
+function displaCentigradTemperature(event){
+  event.preventDefault()
+  centigradLink.classList.add("active")
+fahrenheitLink.classList.remove("active")
+
+  let temperatureElement=document.querySelector("#cityTemp")
+
+temperatureElement.innerHTML= Math.round(centigradTemperature)
+}
+ 
+  let fahrenheitLink=document.querySelector("#fahrenheit")
 fahrenheitLink.addEventListener("click",displayFahrenheitTemperature)
+
+  let centigradLink=document.querySelector("#centigrad")
+  centigradLink.addEventListener("click",displaCentigradTemperature)
+  
