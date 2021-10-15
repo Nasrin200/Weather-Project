@@ -20,94 +20,39 @@
 
 <div class="weather-border">
       <form class="weather" id="forms">
-        <input type="text" id="cityname" class="cityName" />
+        <input type="search" id="cityname" class="cityName" placeholder="Type a city.." />
         <input
           class="search"
           type="submit"
           name="weather"
           id="weather"
           value="Search"
+
         /></form
-    ></span>
-
-    <button>Current</button>
-
+    >
+  </span>
     <div class="centered">
-      <div><span class="header"
-        >weather in
+      <div>
         <h1 id="hc"></h1>
-        now</span
-      >
-    </div>
+         </div>
       <p id="time"></p>
       <div class="sunny">
         <div class="row">
-          <div class="col-6">
+          <div class="col-6" id="right">
             <span>
-              <h2 id="cityTemp"></h2></span><span id="centigrad">°C</span></h2>
-              <img class="sun" id="icon" src="http://openweathermap.org/img/wn/10d@2x.png">
+              <h2 id="cityTemp"></h2></span><a href="" id="centigrad">°C </a>| <a href="" id="fahrenheit">°F</a>
+              <img class="sun" id="icon" src="">
               <div id="condition"></div>
               <div id="date"></div>
           </div>
           <div class="col-6">
-            Precipitation:<span id="prec">0</span>% <br />
-            Humidity: <span id="hum">14</span>% <br />
-            Wind: <span id="wind">8</span>km/h
+            Humidity: <span id="hum"></span>% <br />
+            Wind: <span id="wind"></span>km/h
           </div>
         </div>
       </div>
 
-      <div class="tomorrow">
-        <div class="row">
-          <div class="col-3"><strong> Tomorrow</strong></div>
-          <div class="col-3">
-            28℃ <br />
-            19℃
-          </div>
-          <div class="col-3">Wind: 7 km/h</div>
-        </div>
-      </div>
-      <div class="wednsday">
-        <div class="row">
-          <div class="col-3"><strong>Wednsday</strong></div>
-          <div class="col-3">
-            30℃ <br />
-            22℃
-          </div>
-
-          <div class="col-3">Wind: 8 km/h</div>
-        </div>
-      </div>
-      <div class="thursday">
-        <div class="row">
-          <div class="col-3"><strong>Thursday</strong></div>
-          <div class="col-3">
-            29℃ <br />
-            20℃
-          </div>
-          <div class="col-3">Wind: 5 km/h</div>
-        </div>
-      </div>
-      <div class="friday">
-        <div class="row">
-          <div class="col-3"><strong>Friday</strong></div>
-          <div class="col-3">
-            32℃ <br />
-            25℃
-          </div>
-          <div class="col-3">Wind: 8 km/h</div>
-        </div>
-      </div>
-      <div class="saturday">
-        <div class="row">
-          <div class="col-3"><strong>Saturday</strong></div>
-          <div class="col-3">
-            31℃ <br />
-            24℃
-          </div>
-          <div class="col-3">Wind: 6 km/h</div>
-        </div>
-      </div>
+     
       <script src="src/index.js"></script>
     </div>
     <div id="open-source"><a href="https://github.com/Nasrin200/Weather-Project" target="_blank">Open-source code </a>by Nasrin Alizadeh</div>

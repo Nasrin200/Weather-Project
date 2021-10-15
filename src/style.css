@@ -1,34 +1,41 @@
 .weather-border {
 background-color: antiquewhite;
 max-width: 600px;
+max-height: 400px;
 border-radius: 20px;
 margin: 0 auto;
 border: 1px solid pink;
+height: 400px;
+
 }
 #forms {
-padding-top: 30px;
-}
-button {
-  margin-top: 30px;
+margin-top: 20px;
+margin-left: 30px;
 }
 h1 {
   display: inline;
 }
 .header {
-  margin-top: 100px;
+  margin-top: 150px;
   margin-left: 90px;
 }
 h2 {
   display: inline;
   color: blue;
 }
-#centigrad {
-  display: inline;
-  color: blue;
+#condition {
+ text-transform: capitalize;
 }
+
 .sunny {
   margin-top: 30px;
 }
+#centigrad {
+text-decoration: none;
+}
+#fahrenheit {
+  text-decoration: none;
+  }
 .tomorrow {
   padding: 10px;
   margin-top: 40px;
@@ -66,17 +73,8 @@ h2 {
 .cityName {
   border-radius: 10px;
 }
-#centigrad:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-#fahrenheit:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-#forms {
-  display: inline;
-}
+
+
 button {
   margin-left: 15px;
   color: white;
@@ -85,7 +83,7 @@ button {
   border-color: transparent;
 }
 #open-source{
-  padding-left: 120px;
+  padding-left: 125px;
   padding-top: 20px;
   padding-bottom: 50px;
 }

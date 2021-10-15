@@ -28,9 +28,9 @@ function showWeather(response) {
   document.querySelector("#hum").innerHTML = Math.round(
     response.data.main.humidity
   );
-  document.querySelector("#prec").innerHTML = Math.round(
-    response.data.clouds.all
-  );
+  //document.querySelector("#prec").innerHTML = Math.round(
+   // response.data.clouds.all
+ // );
   let dateElement=document.querySelector("#date")
   dateElement.innerHTML=formatDate(response.data.dt*1000)
 let iconElement= response.data.weather[0].icon
@@ -48,36 +48,44 @@ function search(event) {
 let form = document.querySelector("#forms");
 form.addEventListener("submit", search);
 
-function showCurrent(response) {
-  document.querySelector("#hc").innerHTML = response.data.name;
-  document.querySelector("#condition").innerHTML = 
-    response.data.weather[0].description;
-  document.querySelector("#cityTemp").innerHTML = Math.round(
-    response.data.main.temp
-  );
-  document.querySelector("#wind").innerHTML = Math.round(
-    response.data.wind.speed
-  );
-  document.querySelector("#hum").innerHTML = Math.round(
-    response.data.main.humidity
-  );
-  document.querySelector("#prec").innerHTML = Math.round(
-    response.data.clouds.all
- 
-  );
+
+
+
+//function showCurrent(response) {
+  //document.querySelector("#hc").innerHTML = response.data.name;
+  //document.querySelector("#condition").innerHTML = 
+    //response.data.weather[0].description;
+  //document.querySelector("#cityTemp").innerHTML = Math.round(
+//    response.data.main.temp
+//  );
+//  document.querySelector("#wind").innerHTML = Math.round(
+    //response.data.wind.speed
+  //);
+  //document.querySelector("#hum").innerHTML = Math.round(
+//    response.data.main.humidity
+  //);
+  //document.querySelector("#prec").innerHTML = Math.round(
+//    response.data.clouds.all
+// 
+//  );
+
+//}
+//function endButton() {
+  //function showPosition(position) {
+  //  let lat = position.coords.latitude;
+   // let long = position.coords.longitude;
+   // let apiKey = "001bc651977f4b024af4d84282b0f02a";
+
+    //let apiUrlCurrent = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
+   // axios.get(apiUrlCurrent).then(showCurrent);
+ // }
+  //navigator.geolocation.getCurrentPosition(showPosition);
+//}
+//let button = document.querySelector("button");
+//button.addEventListener("click", endButton);
+function displayFahrenheitTemperature(event){
+event.preventDefault()
 
 }
-function endButton() {
-  function showPosition(position) {
-    let lat = position.coords.latitude;
-    let long = position.coords.longitude;
-    let apiKey = "001bc651977f4b024af4d84282b0f02a";
-    //let cityName = document.querySelector("#cityname").value;
-
-    let apiUrlCurrent = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrlCurrent).then(showCurrent);
-  }
-  navigator.geolocation.getCurrentPosition(showPosition);
-}
-let button = document.querySelector("button");
-button.addEventListener("click", endButton);
+let fahrenheitLink=document.querySelector("#fahrenheit")
+fahrenheitLink.addEventListener("click",displayFahrenheitTemperature)
