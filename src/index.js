@@ -18,9 +18,10 @@ function showWeather(response) {
   document.querySelector("#hc").innerHTML = response.data.name;
   document.querySelector("#condition").innerHTML = 
     response.data.weather[0].description
+    centigradTemperature= response.data.main.temp
     
   document.querySelector("#cityTemp").innerHTML = Math.round(
-    response.data.main.temp
+    centigradTemperature
   );
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
@@ -83,9 +84,13 @@ form.addEventListener("submit", search);
 //}
 //let button = document.querySelector("button");
 //button.addEventListener("click", endButton);
+let centigradTemperature= null;
 function displayFahrenheitTemperature(event){
 event.preventDefault()
+let fahrenheitTemperature = (centigradTemperature*9)/5+32;
+let temperatureElement=document.querySelector("#cityTemp")
 
+temperatureElement.innerHTML= Math.round(fahrenheitTemperature)
 }
 let fahrenheitLink=document.querySelector("#fahrenheit")
 fahrenheitLink.addEventListener("click",displayFahrenheitTemperature)
