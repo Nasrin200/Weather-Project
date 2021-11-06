@@ -92,28 +92,28 @@ form.addEventListener("submit", search);
 //let button = document.querySelector("button");
 //button.addEventListener("click", endButton);
 let centigradTemperature= null;
-function displayFahrenheitTemperature(event){
-event.preventDefault()
-centigradLink.classList.remove("active")
-fahrenheitLink.classList.add("active")
-let fahrenheitTemperature = (centigradTemperature*9)/5+32;
-let temperatureElement=document.querySelector("#cityTemp")
+//function displayFahrenheitTemperature(event){
+//event.preventDefault()
+//centigradLink.classList.remove("active")
+//fahrenheitLink.classList.add("active")
+//let fahrenheitTemperature = (centigradTemperature*9)/5+32;
+//let temperatureElement=document.querySelector("#cityTemp")
 
-temperatureElement.innerHTML= Math.round(fahrenheitTemperature)
-}
+//temperatureElement.innerHTML= Math.round(fahrenheitTemperature)
+//}
 
 function displaCentigradTemperature(event){
   event.preventDefault()
   centigradLink.classList.add("active")
-fahrenheitLink.classList.remove("active")
+//fahrenheitLink.classList.remove("active")
 
   let temperatureElement=document.querySelector("#cityTemp")
 
 temperatureElement.innerHTML= Math.round(centigradTemperature)
 }
  
-  let fahrenheitLink=document.querySelector("#fahrenheit")
-fahrenheitLink.addEventListener("click",displayFahrenheitTemperature)
+  //let fahrenheitLink=document.querySelector("#fahrenheit")
+//fahrenheitLink.addEventListener("click",displayFahrenheitTemperature)
 
   let centigradLink=document.querySelector("#centigrad")
   centigradLink.addEventListener("click",displaCentigradTemperature)
